@@ -1,0 +1,77 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: var(--font-inter), system-ui, -apple-system, sans-serif;
+  --font-serif: var(--font-cormorant), Georgia, serif;
+  
+  --color-gold-50: #fbf8eb;
+  --color-gold-100: #f5edcb;
+  --color-gold-200: #ecdb97;
+  --color-gold-300: #dfc15c;
+  --color-gold-400: #d4af37; /* Primary Gold */
+  --color-gold-500: #b8901c;
+  --color-gold-600: #936e13;
+  --color-gold-700: #715011;
+  --color-gold-800: #5c4113;
+  --color-gold-900: #503715;
+  --color-gold-950: #2e1d09;
+
+  --color-burgundy-50: #fdf2f3;
+  --color-burgundy-100: #fbe6e8;
+  --color-burgundy-200: #f6d1d5;
+  --color-burgundy-300: #eda9b2;
+  --color-burgundy-400: #e07786;
+  --color-burgundy-500: #cb4b5f;
+  --color-burgundy-600: #b33146;
+  --color-burgundy-700: #962537;
+  --color-burgundy-800: #7c2130;
+  --color-burgundy-900: #6b1d2f; /* Deep Burgundy */
+  --color-burgundy-950: #4a0e17; /* Dark Burgundy */
+  
+  --color-dark-bg: #09090b;
+  --color-dark-card: #121214;
+  --color-dark-border: #222226;
+}
+
+:root {
+  --background: #09090b;
+  --foreground: #f4f4f5;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom styles for high-converting landing page elements */
+.gold-text-glow {
+  text-shadow: 0 0 10px rgba(212, 175, 55, 0.25);
+}
+
+.burgundy-glow {
+  box-shadow: 0 0 40px rgba(74, 14, 23, 0.35);
+}
+
+.gold-border-glow {
+  box-shadow: 0 0 15px rgba(212, 175, 55, 0.15);
+}
+
+/* Subtle micro-animations */
+@keyframes pulse-subtle {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.95;
+    transform: scale(1.02);
+  }
+}
+
+.animate-pulse-subtle {
+  animation: pulse-subtle 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
